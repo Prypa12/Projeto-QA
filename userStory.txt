@@ -1,0 +1,69 @@
+Valor : Clicar no campo e-mail e habilitar a inserção de e-mail cadastrado, clicar no campo senha digitar senha e apertar no botão acessar.
+
+Narrativa do usuário
+
+Como: Cliente
+
+Eu quero: Acessar a pagina de login
+
+Para: Digitar e-mail, senha e clicar no  botão de acessar.
+
+Requisitos:
+
+Atores: Usuário/Cliente
+
+Interface: Documentação UX/UI
+
+  4. Dados:
+
+Criação de banco de dados para armazenar informações dos cadastros criados.
+
+Criação de API para fazer integração com o banco de dados
+
+Criação de Crud para cadastros de usuários
+
+5. Ambiente:
+
+Web e Web Mobile
+
+Ambientes para todo processo de desenvolvimento, pipeline e homologação de cliente deverão estar configurados.
+
+
+
+Critérios de Aceite
+
+O usuário deverá visualizar a  obrigatoriedade da inserção do e-mail e senha chegar a pagina de desconto.
+
+O botão entrar deverá escurecer quando passar o cursor do mouse.
+
+Quando for direcionado para a pagina de desconto, botão “GANHAR DESCONTO“ deverá ser clicavel
+
+
+
+Cenário 1
+
+Usuário sem cadastro deseja  ganhar desconto:
+
+Dado que o cliente esteja no tela de login e deseja se cadastrar
+
+Quando digitar o e mail e senha, clicar no botão CRIAR CONTA.
+
+Então será direcionado para a pagina ganhar desconto.
+
+
+
+ precisará criar o e-mail e senha do lado direito da tela antes em CRIAR CONTA, então irá criar uma conta com um e-mail que ainda não está na base de dados e cadastrará uma senha, assim será direcionado para a pagina do desconto.
+
+Cenário 2
+
+Usuário já cadastrado esqueceu a senha:
+
+Dado que o usuário esteja na tela de recuperação de senha e  veja o link “ESQUECI MINHA SENHA”
+
+Quando o usuário digitar o e-mail e clicar no botão de enviar e o link de troca de senha for enviado
+
+Então o usuário poderá cadastrar uma nova senha
+
+
+
+ deverá existir campo clicavel escrito “ESQUECI MINHA SENHA”, o sistema ira solicitar o e-mail do usuário terá um campo para que ele o digite, então será enviado um link de acesso para troca de senha para o e-mail do usuário, assim poderá cadastrar uma nova senha, neste caso ele será automaticamente direcionado para a página do desconto, já que todos os usuários com e-mails cadastrados anteriormente tem direito ao beneficio.
